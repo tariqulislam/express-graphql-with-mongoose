@@ -1,0 +1,31 @@
+{
+  "name": "express-graphql-basic-server",
+  "version": "1.0.0",
+  "description": "this is test for graphql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tariqulislam/express-graphql-basic-server.git"
+  },
+  "keywords": [
+    "graphql",
+    "express-graphql",
+    "express",
+    "mysql"
+  ],
+  "author": "Tariqul Islam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tariqulislam/express-graphql-basic-server/issues"
+  },
+  "homepage": "https://github.com/tariqulislam/express-graphql-basic-server#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.2",
+    "lodash": "^4.17.10"
+  }
+}
