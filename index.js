@@ -2,8 +2,15 @@ const express = require('express');
 const { buildSchema } = require('graphql');
 const grapHTTP = require('express-graphql');
 const schema = require('./src/schema');
-let port = 3000;
+const mongoose = require('mongoose');
+const database = require('./config/database');
+const port = 3000;
 
+mongoose.Promise = global.Promise;
+
+mongoose.connect(database.mongoConnectionString,(err) => {
+    console.log(err);
+});
 // let schema = buildSchema(`
 //     type Query {
 //         postTitle: String,

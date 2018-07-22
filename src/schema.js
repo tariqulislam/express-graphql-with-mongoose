@@ -9,7 +9,7 @@ const AuthorType = new GraphQLObjectType({
     fields: () => ({
         id: {type: new GraphQLNonNull(GraphQLString)},
         name: {type: new GraphQLNonNull(GraphQLString)},
-        twitterHandle: {type: GraphQLString}
+        email: {type: GraphQLString}
     })
 });
 
