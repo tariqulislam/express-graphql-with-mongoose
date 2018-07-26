@@ -9,7 +9,12 @@ const port = 3000;
 mongoose.Promise = global.Promise;
 
 mongoose.connect(database.mongoConnectionString,(err) => {
-    console.log(err);
+    if(err) {
+        console.log(err);
+    } else {
+        console.log('db connection is okay');
+    }
+
 });
 // let schema = buildSchema(`
 //     type Query {
