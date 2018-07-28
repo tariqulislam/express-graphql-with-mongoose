@@ -1,7 +1,7 @@
 var {GraphQLNonNull, GraphQLString} = require('graphql');
 var AuthorType = require('../queries/AuthorType');
 var Author = require('../../models/Author')
-
+var mongoose = require('mongoose')
 
 const addAuthor = {
     type: AuthorType,
@@ -42,7 +42,20 @@ const updateAuthor = {
         }
     },
     resolve: async function(root, param) {
+       let updateAuthor = {};
+       if(!param.name) {
+           updateAuthor.name = param.name
+       }
+       if(!param.email) {
+           updateAuthor.email = param.email
+       }
 
+       const uAuthor = await Author.update({id: mongoose.Types.ObjectId(param.id)}, {$set: updateAuthor})
+       if(!uAuthor) {
+           return {output: 'error', message: 'unable to update author information', author: null};
+       }
+
+       return {output: 'success', message: 'Author Information Update Successfully.', author: uAuthor};
 
     }
 }
@@ -56,6 +69,12 @@ const deleteAuthor = {
         }
     },
     resolve: async function (root, param) {
+      let delAuthor = await Author.findByIdAndRemove(mongoose.Types.ObjectId(param.id));
+      if(!delAuthor) {
+        return {output: 'error', message: 'unable to delete author information', author: null};
+    }
+
+    return {output: 'success', message: 'Author Information delete Successfully.', author: delAuthor};
 
     }
 }
