@@ -21,9 +21,42 @@ const addAuthor = {
         if(!newAuthor) {
             throw new Error('Error')
         }
-
         return newAuthor
     }
 }
 
-module.exports = {addAuthor}
+const updateAuthor = {
+    type: AuthorType,
+    args: {
+        id: {
+            name: 'id',
+            type: new GraphQLNonNull(GraphQLString)
+        },
+        name: {
+            name: 'name',
+            type: new GraphQLString()
+        },
+        email: {
+            name: 'email',
+            type: new GraphQLString()
+        }
+    },
+    resolve: async function(root, param) {
+
+
+    }
+}
+
+const deleteAuthor = {
+    type: AuthorType,
+    args: {
+        id: {
+            name: 'id',
+            type: new GraphQLNonNull(GraphQLString)
+        }
+    },
+    resolve: async function (root, param) {
+
+    }
+}
+module.exports = {addAuthor, updateAuthor, deleteAuthor}
