@@ -1,8 +1,7 @@
 
 const { GraphQLString, GraphQLObjectType, GraphQLNonNull } = require('graphql');
-
 const AuthorType = new GraphQLObjectType({
-    name: 'Author',
+    name: 'AuthorType',
     description: "This represent an author",
     fields: () => ({
         _id: {type: new GraphQLNonNull(GraphQLString)},

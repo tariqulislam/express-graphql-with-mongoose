@@ -4,6 +4,7 @@
   "description": "this is test for graphql",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +29,7 @@
     "express-graphql": "^0.6.12",
     "graphql": "^0.13.2",
     "lodash": "^4.17.10",
-    "mongoose": "^5.2.4"
+    "mongoose": "^5.2.4",
+    "nodemon": "^1.18.3"
   }
 }
