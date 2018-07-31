@@ -1,5 +1,7 @@
-var { addAuthor } = require('./AuthorMutation')
+var { addAuthor, updateAuthor, deleteAuthor } = require('./AuthorMutation')
 
 module.exports = {
-    addAuthor
+    addAuthor,
+    updateAuthor,
+    deleteAuthor
 }
