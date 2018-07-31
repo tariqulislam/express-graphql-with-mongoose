@@ -11,7 +11,16 @@ I have build this server to work with graphql for large scale application. Provi
 1. Install the mongodb
 2. Create Database to mongodb named `graphqltest`
 3. Add username and password to mongodb and provide all permission to database
+4. Import `json` file from `db` folder to mongodb database.
 4. Change the `.env` file for database configuration
+
+```
+DATABASE_HOST=localhost
+DATABASE_PORT=27017
+DATABASE_USER=<username>
+DATABASE_PASS=<password>
+DATABASE_NAME=graphqltest
+```
 
 # Introductions and knowladgebase
 
@@ -37,3 +46,30 @@ Mongoose is an object data modeling (ODM) library that provides a rigorous model
 ### express JS
 
 Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+
+## Sample coding for create graphql api for client
+
+### Create the mongoose schema for database interactions
+
+1. Go to `src/models` folder
+2. Create file `Author.js`
+```javascript
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const authorSchema = new Schema({
+    name: { type: String },
+    email: {type: String, required: true, unique: true}
+});
+
+const Author = mongoose.model('Author', authorSchema);
+
+module.exports = Author;
+```
+this code snappit contains the `model` defination for `mongodb` using `mongoose` ODM.
+1. first we add `mongoose` by adding ```javascript const mongoose = require('mongoose');```
+2. then add the ```javascript const Schema = mongoose.Schema;``` schema for support different datatype and constraint of ```mongoose```
+3. create the schema defination for `Author` table which contains the `mongodb` `collection` information
+
+
+
