@@ -486,6 +486,12 @@ app.use('/', graphQLHttp({
 ```
 4. Run the Application by `npm start` or if you are using `yarn` command will be `yarn start`
 
+## Query and Mutation Example
+
+1. Query with Author Data:
+
+
+
 
 
 
