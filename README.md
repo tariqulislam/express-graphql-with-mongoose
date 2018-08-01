@@ -1,4 +1,4 @@
-# GraphQL with express-graphql and mongoose
+# GraphQL practical example with express-graphql and mongoose
 
 GraphQL developed by Facebook in 2012 and publicly available in 2015. GraphQL is alternative of REST full web service. It allows clients Query with flexible data structure which are required for client. It also support the data manipulation and modification functionlaity named `mutation` Like rest api. GraphQL provide official middleware for express server named `express-graphql`.
 
