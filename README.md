@@ -1,5 +1,10 @@
-# GraphQL with express-graphql and mongoose 
-I have build this server to work with graphql for large scale application. Provide the better structure to use graphql with express js. Using the mongodb for database and mongoose for database ODM for express js.
+# GraphQL with express-graphql and mongoose
+
+GraphQL developed by Facebook in 2012 and publicly available in 2015. GraphQL is alternative of REST full web service. It allows clients Query with flexible data structure which are required for client. It also support the data manipulation and modification functionlaity named `mutation` Like rest api. GraphQL provide official middleware for express server named `express-graphql`.
+
+Over the past two month, I tried to learn about `graphql` and `graphql` connection with `database` using `express js`. I read some blogs and article. Most of the author provide the example or tutorial which `graphql` is related to `static` json data. Some blog are provide simple example with one `graphql's` `type`.
+
+So I am tried to read those blogs and `graphql` documentation again and again. Last tow week ago, I think about some idea about how i connect the `mongodb` with `graphql` using `express js` as web server. create the example which provides CRUD operation functionality with tow `mongodb` `collections` with `one to many` relation. this project will provide the idea about how developer handle the `one to many` and `many to many` relation `graphql's` `type` using `mongoose` and `graphql-express`.This Project will also show the path how to build better web service structure using graphql with express js.
 
 # Installation instructions
 
