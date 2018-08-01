@@ -84,8 +84,11 @@ this code snappit contains the `model` defination for `mongodb` using `mongoose`
 3. Schema defination for `authorSchema` and `postSchema` contains the `mongodb` `collection` information
 
 ## What is Schema in Graphql?
+GraphQL has its own type language that’s used the write GraphQL schemas: The Schema Definition Language (SDL). Schema contains the some attributes named
 
-## How to Create Schema in express-graphql?
+1. Query
+2. Mutation
+3. Subscription
 
 ## What is Type in graphql?
 The most basic components of a GraphQL schema are object types, which just represent a kind of object you can fetch from your service, and what fields it has. In the GraphQL schema language, we might represent it like this:
@@ -166,6 +169,25 @@ module.exports = PostType
 7. ```var authors =  await  Author.findById(mongoose.Types.ObjectId(post.author_id))``` return `author` information related to specific `post`
 8. to handle the error i have to throw the `Error` object, which object has no `author` information by ```throw new Error('Error')```
 9. or `return authors` which contains `AuthorType` graphql Object Type Information.
+
+
+## How to Create Schema in express-graphql?
+
+```javascript
+const { GraphQLObjectType,GraphQLSchema } = require('graphql');
+const mutation = require('./graphql/mutations/index')
+const BlogQueryRootType = require('./graphql/queries/index')
+
+const BlogAppSchema = new GraphQLSchema({
+   query: BlogQueryRootType,
+   mutation: new GraphQLObjectType({
+       name: 'Mutation',
+       fields: mutation
+   })
+});
+
+module.exports = BlogAppSchema;
+```
 
 
 
