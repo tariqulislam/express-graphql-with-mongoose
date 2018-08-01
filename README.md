@@ -388,7 +388,7 @@ const updatePost = {
        }
 
        if(param.title) {
-           updatePost.author_id = param.title
+           updatePost.title = param.title
        }
 
        if(param.body) { 
