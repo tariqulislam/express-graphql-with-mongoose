@@ -488,7 +488,22 @@ app.use('/', graphQLHttp({
 
 ## Query and Mutation Example
 
-1. Query with Author Data:
+1. Mutation Example for Adding the Author
+
+![Adding Author image](https://github.com/tariqulislam/express-graphql-basic-server/blob/master/images/addAuthor.jpg)
+
+2. Query Example for Show All Author
+
+![Show All Authors](https://github.com/tariqulislam/express-graphql-basic-server/blob/master/images/authorlist.jpg)
+
+3. Mutation for update Author Information
+
+![Update Author Info] (https://github.com/tariqulislam/express-graphql-basic-server/blob/master/images/updateAuthor.jpg)
+
+4. Mutation for delete Author
+
+![Delete Author](https://github.com/tariqulislam/express-graphql-basic-server/blob/master/images/deleteAuthor.jpg)
+
 
 
 
