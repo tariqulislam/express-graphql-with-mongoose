@@ -505,6 +505,17 @@ app.use('/', graphQLHttp({
 ![Delete Author](https://github.com/tariqulislam/express-graphql-basic-server/blob/master/images/deleteAuthor.jpg)
 
 
+5. Mutation for create the post info
+
+![Create Post](https://github.com/tariqulislam/express-graphql-basic-server/blob/master/images/createPost.jpg)
+
+6. Query for get all post with author data
+
+![All Post with author data](https://github.com/tariqulislam/express-graphql-basic-server/blob/master/images/postinfo.jpg)
+
+7. Update Post Information
+
+![Update Post Information](https://github.com/tariqulislam/express-graphql-basic-server/blob/master/images/updatePost.jpg)
 
 
 
