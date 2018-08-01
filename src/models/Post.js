@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const postSchema = new Schema({
-    author_id: String,
+    author_id: Schema.Types.ObjectId,
+    title: String,
     category: String,
     body: String
 });

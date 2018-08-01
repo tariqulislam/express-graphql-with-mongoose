@@ -1,21 +1,11 @@
 { 
-    "_id" : ObjectId("5b59821a6b3e805b3d25303c"), 
-    "name" : "Orinami Olatunji", 
-    "email" : "test@gmail.com"
-}
-{ 
-    "_id" : ObjectId("5b59821a6b3e805b3d25303d"), 
-    "name" : "Ojima Udale", 
-    "email" : "test@uncooloj.com"
-}
-{ 
     "_id" : ObjectId("5b59821a6b3e805b3d25303e"), 
     "name" : "Xabi Alonso", 
     "email" : "test2@gmail.com"
 }
 { 
-    "_id" : ObjectId("5b5c0678d0773206f3a3dc67"), 
-    "name" : "Tariqul Islam", 
-    "email" : "tariqul.islam.rony1234@gmail.com", 
+    "_id" : ObjectId("5b614eb8d28ac81231d3fa40"), 
+    "name" : "Tariqul Islam ronnie", 
+    "email" : "tariqul.islam.rony+444@gmail.com", 
     "__v" : NumberInt(0)
 }

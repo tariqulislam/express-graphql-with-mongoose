@@ -1,4 +1,4 @@
-var {GraphQLNonNull, GraphQLString, Graphql} = require('graphql');
+var {GraphQLNonNull, GraphQLString} = require('graphql');
 var AuthorType = require('../queries/AuthorType');
 var Author = require('../../models/Author')
 

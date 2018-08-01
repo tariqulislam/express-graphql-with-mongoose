@@ -20,7 +20,7 @@ const BlogQueryRootType = new GraphQLObjectType ({
             type: new GraphQLList(PostType),
             description: "List of all posts",
             resolve: async function () {
-               var posts = await  Post.find({}, (err, post) => {})
+               var posts = await  Post.find({})
                return posts;
             }
         }
