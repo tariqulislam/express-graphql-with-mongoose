@@ -170,6 +170,10 @@ module.exports = PostType
 8. to handle the error i have to throw the `Error` object, which object has no `author` information by ```throw new Error('Error')```
 9. or `return authors` which contains `AuthorType` graphql Object Type Information.
 
+## How to Create Root Query for Schema by express-graphql?
+
+
+## How to Create Mutation by express-graphql?
 
 ## How to Create Schema in express-graphql?
 
