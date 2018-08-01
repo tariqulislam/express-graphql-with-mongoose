@@ -13,7 +13,27 @@ So I am tried to read those blogs and `graphql` documentation again and again. L
 3. Or for npm run command `npm install`
 
 # Project Structure
-
+```
+EXPORESS-GRAPHQL-WITH-MONGOOSE
+|--------------
+|--| config
+|----| database.js (database configuration file)
+|--|db (mongodb exported collection)
+|----| <mongodb collection>.json (mongodb exported file)
+|--| src (Project soruce file directory)
+|----| graphql (All graphql related file directory)
+|------| mutations (All graphql mutation related file directory)
+|--------| <Type Wise Mutation>.js (Graphql type wise mutation files)
+|--------| index.js (export all mutation to other module by this file)
+|------| queries (All GraphQL Query related files)
+|--------| <GraphQL type file>.js (Individual Graphql type related file)
+|--------| index.js (GraphQL Root Type file)
+|----| models (All mongoose ODM related file)
+|------| <mongoose model>.js (mongoose model and schema related file)
+|----| schema.js (GraphQL Schema building file)
+|--| .env (node js environment variable related file)
+|--| index.js (main file for run web server and connection mongoose create GraphQL Endpoint)
+```
 # Prerequsite and configurations
 1. Install the `mongodb` and `Studio 3T` non commercial version.
 2. Create Database to mongodb named `graphqltest`
