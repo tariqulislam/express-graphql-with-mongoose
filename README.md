@@ -1,4 +1,4 @@
-# express-graphql-basic-server
+# GraphQL with express-graphql and mongoose 
 I have build this server to work with graphql for large scale application. Provide the better structure to use graphql with express js. Using the mongodb for database and mongoose for database ODM for express js.
 
 # Installation instructions
