@@ -1,7 +1,6 @@
-var {GraphQLNonNull, GraphQLString} = require('graphql');
+var {GraphQLNonNull, GraphQLString, Graphql} = require('graphql');
 var AuthorType = require('../queries/AuthorType');
 var Author = require('../../models/Author')
-var mongoose = require('mongoose')
 
 const addAuthor = {
     type: AuthorType,
@@ -28,54 +27,50 @@ const addAuthor = {
 const updateAuthor = {
     type: AuthorType,
     args: {
-        id: {
-            name: 'id',
+        _id: {
+            name: '_id',
             type: new GraphQLNonNull(GraphQLString)
         },
         name: {
             name: 'name',
-            type: new GraphQLString()
+            type: GraphQLString
         },
         email: {
             name: 'email',
-            type: new GraphQLString()
+            type: GraphQLString
         }
     },
     resolve: async function(root, param) {
        let updateAuthor = {};
-       if(!param.name) {
+       if(param.name) {
            updateAuthor.name = param.name
        }
-       if(!param.email) {
+       if(param.email) {
            updateAuthor.email = param.email
        }
-
-       const uAuthor = await Author.update({id: mongoose.Types.ObjectId(param.id)}, {$set: updateAuthor})
+       const uAuthor = await Author.findByIdAndUpdate(param._id, updateAuthor, {new: true})
+       console.log(uAuthor)
        if(!uAuthor) {
-           return {output: 'error', message: 'unable to update author information', author: null};
+           throw new Error('Error')
        }
-
-       return {output: 'success', message: 'Author Information Update Successfully.', author: uAuthor};
-
+       return uAuthor
     }
 }
 
 const deleteAuthor = {
     type: AuthorType,
     args: {
-        id: {
-            name: 'id',
+        _id: {
+            name: '_id',
             type: new GraphQLNonNull(GraphQLString)
         }
     },
     resolve: async function (root, param) {
-      let delAuthor = await Author.findByIdAndRemove(mongoose.Types.ObjectId(param.id));
-      if(!delAuthor) {
-        return {output: 'error', message: 'unable to delete author information', author: null};
-    }
-
-    return {output: 'success', message: 'Author Information delete Successfully.', author: delAuthor};
-
+      const deleteAuthor =  await Author.findByIdAndRemove(param._id)
+      if(!deleteAuthor) {
+         throw new Error('Error');
+      }
+      return deleteAuthor
     }
 }
 module.exports = {addAuthor, updateAuthor, deleteAuthor}
