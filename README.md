@@ -1,5 +1,7 @@
 # GraphQL practical example with express-graphql and mongoose
 
+![Project Image](https://github.com/tariqulislam/express-graphql-with-mongoose/blob/master/images/symbol.png)
+
 GraphQL developed by Facebook in 2012 and publicly available in 2015. GraphQL is alternative of REST full web service. It allows clients Query with flexible data structure which are required for client. It also support the data manipulation and modification functionlaity named `mutation` Like rest api. GraphQL provide official middleware for express server named `express-graphql`.
 
 Over the past two month, I tried to learn about `graphql` and `graphql` connection with `database` using `express js`. I read some blogs and article. Most of the author provide the example or tutorial which `graphql` is related to `static` json data. Some blog are provide simple example with one `graphql's` `type`.
