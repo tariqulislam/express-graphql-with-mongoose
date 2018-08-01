@@ -12,6 +12,8 @@ So I am tried to read those blogs and `graphql` documentation again and again. L
 2. For Yarn run command `yarn install`
 3. Or for npm run command `npm install`
 
+# Project Structure
+
 # Prerequsite and configurations
 1. Install the `mongodb` and `Studio 3T` non commercial version.
 2. Create Database to mongodb named `graphqltest`
@@ -19,6 +21,7 @@ So I am tried to read those blogs and `graphql` documentation again and again. L
 4. Grant all permission to user.
 5. Import `json` file from `db` folder to `graphqltest` database.
 6. Change the `.env` file for database configuration
+7. Run the command `yarn start` or `npm start`
 
 ```
 DATABASE_HOST=localhost
