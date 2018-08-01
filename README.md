@@ -498,7 +498,7 @@ app.use('/', graphQLHttp({
 
 3. Mutation for update Author Information
 
-![Update Author Info] (https://github.com/tariqulislam/express-graphql-basic-server/blob/master/images/updateAuthor.jpg)
+![Update Author Info](https://github.com/tariqulislam/express-graphql-basic-server/blob/master/images/updateAuthor.jpg)
 
 4. Mutation for delete Author
 
